@@ -8,7 +8,7 @@ OPERATOR_BASE_DIR   ?= ${OUT}/operator
 
 # default registry and org to pull service images from
 SERVICE_REGISTRY    ?= quay.io
-SERVICE_ORG         ?= tripleowallabycentos9
+SERVICE_ORG         ?= zerostack
 
 # OpenStack Operator
 OPENSTACK_IMG        ?= quay.io/openstack-k8s-operators/openstack-operator-index:latest
@@ -24,11 +24,11 @@ KEYSTONEAPI         ?= config/samples/keystone_v1beta1_keystoneapi.yaml
 KEYSTONEAPI_IMG     ?= ${SERVICE_REGISTRY}/${SERVICE_ORG}/openstack-keystone:current-tripleo
 
 # Mariadb
-MARIADB_IMG         ?= quay.io/openstack-k8s-operators/mariadb-operator-index:latest
-MARIADB_REPO        ?= https://github.com/openstack-k8s-operators/mariadb-operator.git
+MARIADB_IMG         ?= quay.io/zerostack/mariadb-operator-index:latest
+MARIADB_REPO        ?= https://github.com/zerodayz/mariadb-operator.git
 MARIADB_BRANCH      ?= master
 MARIADB             ?= config/samples/mariadb_v1beta1_mariadb.yaml
-MARIADB_DEPL_IMG    ?= ${SERVICE_REGISTRY}/${SERVICE_ORG}/openstack-mariadb:current-tripleo
+MARIADB_DEPL_IMG    ?= ${SERVICE_REGISTRY}/${SERVICE_ORG}/openstack-mariadb:latest
 
 # Placement
 PLACEMENT_IMG       ?= quay.io/openstack-k8s-operators/placement-operator-index:latest

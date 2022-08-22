@@ -39,7 +39,7 @@ if [ -z "$IMAGE" ]; then
       echo "Please set IMAGE"; exit 1
 fi
 
-NAME=${KIND,,}
+NAME=${KIND:-}
 
 if [ ! -d ${DEPLOY_DIR} ]; then
       mkdir -p ${DEPLOY_DIR}
